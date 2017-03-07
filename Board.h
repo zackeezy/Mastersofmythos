@@ -9,6 +9,7 @@ using std::vector;
 
 class Board{
     public:
+    //Player one
     stack<Card> p1Deck;
     stack<Card> p1Discarded;
     vector<Card> p1Hand;
@@ -16,6 +17,7 @@ class Board{
     Card p1Backup[4];
     Card p1Setting;
 
+    //Player two
     stack<Card> p2Deck;
     stack<Card> p2Discarded;
     vector<Card> p2Hand;
