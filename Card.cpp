@@ -15,9 +15,13 @@ Card::Card(Card& c){
     classification = c.classification;
 }
 
-Card operator=(Card& c){
+Card Card::operator=(Card& c){
     power = c.power;
     resistance = c.resistance;
     name = c.name;
     classification = c.classification;
+}
+
+bool Card::isSetting(){
+    return false;
 }
