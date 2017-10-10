@@ -8,8 +8,6 @@
       <in>Card.h</in>
       <in>Player.cpp</in>
       <in>Player.h</in>
-      <in>Setting.cpp</in>
-      <in>Setting.h</in>
       <in>source.cpp</in>
     </df>
   </logicalFolder>

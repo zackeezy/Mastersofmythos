@@ -4,7 +4,6 @@
     <df root="." name="0">
       <in>Card.cpp</in>
       <in>Player.cpp</in>
-      <in>Setting.cpp</in>
       <in>source.cpp</in>
     </df>
     <logicalFolder name="ExternalFiles"
@@ -43,8 +42,6 @@
       <item path="Card.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Player.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Setting.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="source.cpp" ex="false" tool="1" flavor2="0">
       </item>

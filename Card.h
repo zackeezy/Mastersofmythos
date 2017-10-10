@@ -2,9 +2,8 @@
 #define CREATURECARD_H
 
 #include <string>
-#include "Setting.h"
 
-class Card : SettingCard{
+class Card{
 public:
     Card();
     Card(int,int,bool,std::string,std::string);
@@ -15,11 +14,19 @@ public:
     void setPower(int);
     int getResistance();
     void setResistance(int);
+    std::string getName();
+    void setName(std::string);
+    std::string getMatcher();
+    void setMatcher(std::string);
+    bool isSetting();
 
 protected:
     int power;
     int resistance;
     std::string classification;
+    std::string name;
+    std::string matcher;
+    bool settingCard;
 };
 
 #endif
