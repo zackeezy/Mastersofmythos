@@ -9,7 +9,8 @@ public:
     Card(int,int,bool,std::string,std::string);
     virtual ~Card();
     Card(Card&);
-    Card operator=(Card&);
+    Card operator=(const Card&);
+    bool operator==(const Card&) const;
     int getPower();
     void setPower(int);
     int getResistance();
