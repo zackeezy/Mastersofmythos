@@ -86,3 +86,10 @@ Player Player::operator=(Player& p){
     setting = p.setting;
     settingSet = p.settingSet;
 }
+
+bool Player::attackHandler(Card c, int i){
+    if(i < 0 || i > 1)
+        throw("Frontline index must be 0 or 1.");
+    
+    
+}

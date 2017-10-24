@@ -18,9 +18,9 @@ public:
     bool setFrontline(Card);        //returns false if frontline is full
     bool setBackup(Card);           //returns false if backup is full
     void setSetting(Card);          //will replace current if there is already a setting set
-    Player operator=(Player) const;	//assigns the left value to this object then returns it
-	bool attackHandler(Card, int);	//takes card attacking and compares it to the frontline depending on the int passed (either 0 or 1)
-	Card getFrontline(int);			//gets the card in the frontline at the int index (either 0 or 1)
+    Player operator=(Player) const; //assigns the left value to this object then returns it
+    bool attackHandler(Card, int);  //takes card attacking and compares it to the frontline depending on the int passed (either 0 or 1)
+    Card getFrontline(int);         //gets the card in the frontline at the int index (either 0 or 1)
 private:
     std::stack<Card> deck;          //the deck of cards the player has
     std::vector<Card> discarded;    //the cards that have been discarded
