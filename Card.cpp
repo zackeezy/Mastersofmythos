@@ -20,15 +20,7 @@ power(p), resistance(r), settingCard(b), name(n), matcher(m) {
         resistance = 10000;
     }
     
-    if(power + resistance < 2000){
-        classification = 1;
-    }
-    else if(power + resistance < 10000){
-        classification = 2;
-    }
-    else{
-        classification = 3;
-    }
+    setClassification();
 }
 
 Card::Card(Card& c){
@@ -37,6 +29,10 @@ Card::Card(Card& c){
     name = c.name;
     classification = c.classification;
     matcher = c.matcher;
+}
+
+Card::~Card(){
+    //No dynamic memory, so a destructor is unnecessary.
 }
 
 Card Card::operator=(const Card& c){
@@ -73,15 +69,7 @@ void Card::setPower(int p){
         power = 10000;
     }
     
-    if(power + resistance < 2000){
-        classification = 1;
-    }
-    else if(power + resistance < 10000){
-        classification = 2;
-    }
-    else{
-        classification = 3;
-    }
+    setClassification();
 }
 
 int Card::getResistance(){
@@ -98,15 +86,7 @@ void Card::setResistance(int r){
         resistance = 10000;
     }
     
-    if(power + resistance < 2000){
-        classification = 1;
-    }
-    else if(power + resistance < 10000){
-        classification = 2;
-    }
-    else{
-        classification = 3;
-    }
+    setClassification();
 }
 
 std::string Card::getName(){
@@ -125,4 +105,16 @@ std::string Card::getMatcher(){
 void Card::setMatcher(std::string m){
     if(m != "")
         matcher = m;
+}
+
+void Card::setClassification(){
+    if(power + resistance < 2000){
+        classification = 1;
+    }
+    else if(power + resistance < 10000){
+        classification = 2;
+    }
+    else{
+        classification = 3;
+    }
 }

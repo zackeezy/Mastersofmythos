@@ -28,6 +28,7 @@ protected:
     std::string name;
     std::string matcher;
     bool settingCard;
+    void setClassification();
 };
 
 #endif
