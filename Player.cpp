@@ -91,5 +91,26 @@ bool Player::attackHandler(Card c, int i){
     if(i < 0 || i > 1)
         throw("Frontline index must be 0 or 1.");
     
+    if(c.getPower() > frontline[i].getResistance()){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+void Player::handleDeath(int frontlineIndex, int backupIndex){
+    if(frontlineIndex >= 0 and frontlineIndex < 2 and frontline.size() > frontlineIndex)
+        frontline.erase(frontlineIndex);
+    else
+        throw("Frontline index must be 0 or 1.");
+    
+    if(!backup.empty() and backupIndex >= 0 and backupIndex < 4 and backup.size() > backupIndex){
+        frontline[frontlineIndex] = backup[backupIndex];
+        backup.erase(backupIndex);
+    }
+    else if(backup < 0 or backup >= 2){
+        throw("Backup index must be between 0 (inclusive) and 4 (exclusive).");
+    }
     
 }

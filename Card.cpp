@@ -77,7 +77,7 @@ int Card::getResistance(){
 }
 
 void Card::setResistance(int r){
-    if(r > 0 && r < 10000)
+    if(r > 0 and r < 10000)
         resistance = r;
     else if(r < 0){
         resistance = 1;

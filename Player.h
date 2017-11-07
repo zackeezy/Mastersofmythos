@@ -21,6 +21,8 @@ public:
     Player operator=(Player) const; //assigns the left value to this object then returns it
     bool attackHandler(Card, int);  //takes card attacking and compares it to the frontline depending on the int passed (either 0 or 1)
     Card getFrontline(int);         //gets the card in the frontline at the int index (either 0 or 1)
+    void handleDeath(int,int);      //takes two indexes, one of the frontline card killed and one of the backup to replace it. If backup is empty, then the second parameter is ignored.
+
 private:
     std::stack<Card> deck;          //the deck of cards the player has
     std::vector<Card> discarded;    //the cards that have been discarded
